@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>弹出框</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <style>
+        .main{
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="main">
+        <button type="button" class="btn btn-default" data-toggle="popover" data-container="body" data-placement="left" data-content="popover left">popover left</button>
+        <button type="button" class="btn btn-default" data-toggle="popover" data-container="body" data-placement="top" data-content="popover top">popover top</button>
+        <button type="button" class="btn btn-default" data-toggle="popover" data-container="body" data-placement="bottom" data-content="popover bottom">popover bottom</button>
+        <button type="button" class="btn btn-default" data-toggle="popover" data-container="body" data-placement="right" data-content="popover right">popover right</button>
+        <a tabindex="0" class="btn btn-danger" data-toggle="popover" data-trigger="focus" title="popover title" data-content="可消失的弹出框">可消失的弹出框</a>
+    </div>
+</div>
+
+<script src="../assets/js/jquery-1.12.4.js"></script>
+<script src="../assets/js/bootstrap.js"></script>
+<script src="../assets/js/docs.min.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+</body>
+</html>

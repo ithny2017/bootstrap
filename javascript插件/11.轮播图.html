@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <div class="carousel slide" id="myCarousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="holder.js/100%x300/text:One" alt="">
+                <div class="carousel-caption">
+                    <h4>one</h4>
+                    <p>one one one</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="holder.js/100%x300/text:Two" alt="">
+                <div class="carousel-caption">
+                    <h4>two</h4>
+                    <p>two two two</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="holder.js/100%x300/text:Three" alt="">
+                <div class="carousel-caption">
+                    <h4>three</h4>
+                    <p>three three three</p>
+                </div>
+            </div>
+        </div>
+        <a href="#myCarousel" class="carousel-control left" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#myCarousel" class="carousel-control right" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+
+<script src="../assets/js/jquery-1.12.4.js"></script>
+<script src="../assets/js/bootstrap.js"></script>
+<script src="../assets/js/docs.min.js"></script>
+<script>
+    $(function () {
+        $('#myCarousel').carousel({
+            interval:2000
+        });
+    });
+</script>
+</body>
+</html>

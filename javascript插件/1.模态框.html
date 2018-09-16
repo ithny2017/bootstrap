@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>模态框</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#MyModal">Launch demo modal</button>
+     <button type="button" class="btn btn-primary" id="login">Login</button>
+    <!--Launch demo modal-->
+    <div class="modal fade" id="MyModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default">send</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"> close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Login modal-->
+    <div class="modal fade" id="MyLogin" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="#" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="" class="control-label col-md-2">username</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" placeholder="username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label col-md-2">password</label>
+                            <div class="col-md-10">
+                                <input type="password" class="form-control" placeholder="password">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Login</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="../assets/js/jquery-1.12.4.js"></script>
+<script src="../assets/js/bootstrap.js"></script>
+<script src="../assets/js/docs.min.js"></script>
+<script>
+    $(function () {
+//        $('#MyModal').modal('show');
+        $('#login').on('click',function () {
+//            $('#MyLogin').modal('toggle');
+//            $('#MyLogin').on('shown.bs.modal',function () {
+//                alert('show')
+//            });
+            $('#MyLogin').modal('show');
+        });
+        $('#MyModal').on('shown.bs.modal',function () {
+            alert('show')
+        });
+    });
+</script>
+</body>
+</html>

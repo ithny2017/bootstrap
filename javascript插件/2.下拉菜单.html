@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>下拉菜单</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <div class="dropdown" id="myDropdown">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">dropdown</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">dropdown</a></li>
+                <li><a href="#">dropdown</a></li>
+                <li><a href="#">dropdown</a></li>
+                <li><a href="#">dropdown</a></li>
+                <li><a href="#">dropdown</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/jquery-1.12.4.js"></script>
+<script src="../assets/js/bootstrap.js"></script>
+<script src="../assets/js/docs.min.js"></script>
+<script>
+    $(function () {
+//        $('.dropdown-toggle').dropdown();
+        $('#myDropdown').on('hide.bs.dropdown',function () {
+            alert('show');
+        });
+    });
+</script>
+</body>
+</html>

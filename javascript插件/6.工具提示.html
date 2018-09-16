@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>工具提示</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <style>
+        .main{
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="main">
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+        <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+        <button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+        <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Tooltip on right"> Tooltip on right</button>
+        <hr>
+        <div>
+            <button type="button" class="btn btn-danger" data-toggle="tooltip" data-template='<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner">12345</div></div>' title="data-template">Hover Over Me</button>
+
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/jquery-1.12.4.js"></script>
+<script src="../assets/js/bootstrap.js"></script>
+<script src="../assets/js/docs.min.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+</body>
+</html>
